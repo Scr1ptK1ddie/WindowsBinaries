@@ -1,9 +1,10 @@
 # GhostPack-Compiled Binaries
-Compiled binaries for [GhostPack](https://github.com/GhostPack) authored by [@harmj0y](https://twitter.com/harmj0y)
+Compiled binaries for [GhostPack](https://github.com/GhostPack) authored by [@harmj0y](https://twitter.com/harmj0y)   
+Including: Rubeus, Seatbelt
 
 # Other Windows Priv Esc Scripts
 PowerUp.ps1   
-winPEAS ANY,x64,x86
+winPEAS ANY,x64,x86   
 windowsprivchecker.bat   
 
 # Tools
