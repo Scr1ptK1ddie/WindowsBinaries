@@ -3,5 +3,9 @@ Compiled binaries for [GhostPack](https://github.com/GhostPack) authored by [@ha
 
 # Other Windows Priv Esc Scripts
 PowerUp.ps1   
-winPEAS   
-windowsprivchecker.bat
+winPEAS ANY,x64,x86
+windowsprivchecker.bat   
+
+# Tools
+nc.exe  
+old version of accesschk (newer won't work on some older machines) from https://web.archive.org/web/20080530012252/http://live.sysinternals.com/accesschk.exe 
