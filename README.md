@@ -3,7 +3,7 @@
 
 # Windows Priv Esc Scripts
 PowerUp.ps1   
-winPEAS ANY,x64,x86   
+winPEAS ANY,x64,x86.exe   
 windowsprivchecker.bat   
 Seatbelt.exe   
 
