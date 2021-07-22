@@ -1,10 +1,14 @@
 # Enum    
     whoami /priv
+## Scripts
+https://github.com/absolomb/Pentesting/blob/master/scripts/winenum.bat
 
 ## Powershell
     Get-ExecutionPolicy    
     Set-ExecutionPolicy Unrestricted   
-    Set-MpPreference -DisableRealtimeMonitoring $true  
+    Set-MpPreference -DisableRealtimeMonitoring $true   
+    
+# Exploits
 ## Service Exploits
 ### Unquoted Service Paths
     wmic service get name,displayname,pathname,startmode |findstr /i "Auto" |findstr /i /v "C:\Windows\\" |findstr /i /v """   
@@ -36,5 +40,6 @@ https://github.com/SecWiki/windows-kernel-exploits
 # Resources
 ## Cheat Sheets
   https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts
-  
+## Learn More
+
   
