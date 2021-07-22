@@ -1,10 +1,12 @@
 # Enum    
     whoami /priv
-    ipconfig /all   
-    tree /a /f   
+    ipconfig /all     
     net users   
-    net localgroup   
+    net localgroup
+    dir /r    
+    tree /a /f     
     netstat /anto   
+    for /L %i in (1,1,255) do @ping -n 1 -w 200 192.168.1.%i > nul && echo 192.168.1.%i is up.     
     
 ## Scripts
 https://github.com/absolomb/Pentesting/blob/master/scripts/winenum.bat
@@ -58,7 +60,7 @@ ____
   
 # Resources
 ## Cheat Sheets
-  https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts
+https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts
 ## Learn More
-
+https://www.roguesecurity.in/2018/12/02/a-guide-for-windows-penetration-testing/
   
