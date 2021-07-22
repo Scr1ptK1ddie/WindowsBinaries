@@ -18,6 +18,9 @@ https://github.com/absolomb/Pentesting/blob/master/scripts/winenum.bat
 ____   
 
 # Exploits
+## Passwords
+    reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"    
+    
 ## Service Exploits
 ### Unquoted Service Paths
     wmic service get name,displayname,pathname,startmode |findstr /i "Auto" |findstr /i /v "C:\Windows\\" |findstr /i /v """   
