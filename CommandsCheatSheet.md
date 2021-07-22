@@ -5,10 +5,17 @@
     Get-ExecutionPolicy    
     Set-ExecutionPolicy Unrestricted   
     Set-MpPreference -DisableRealtimeMonitoring $true  
-
+## Service Exploits
+### Unquoted Service Paths
+    wmic service get name,displayname,pathname,startmode |findstr /i "Auto" |findstr /i /v "C:\Windows\\" |findstr /i /v """   
+    
 ## Kernel exploits   
     systeminfo | findstr /B /C:"OS Name" /C:"OS Version"   
-
+### Tools
+https://github.com/bitsadmin/wesng   
+https://github.com/rasta-mouse/Watson   
+### Precompiled Kernel Exploits
+https://github.com/SecWiki/windows-kernel-exploits
 
 # File Transfer     
     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .
