@@ -4,7 +4,7 @@ whoami /priv
 
 
 # Powershell
-Get-ExecutionPolicy 
+Get-ExecutionPolicy    
 Set-ExecutionPolicy Unrestricted   
 Set-MpPreference -DisableRealtimeMonitoring $true  
 
