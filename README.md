@@ -3,7 +3,7 @@
 
 # Windows Priv Esc Scripts
 PowerUp.ps1   
-[winPEAS ANY](https://github.com/Scr1ptK1ddie/WindowsPrivEsc/blob/master/winPEASany.exe),x64,x86   
+[winPEAS ANY](https://github.com/Scr1ptK1ddie/WindowsPrivEsc/blob/master/winPEASany.exe),x64,[x86](https://github.com/Scr1ptK1ddie/WindowsPrivEsc/blob/master/winPEASx86.exe)   
 windowsprivchecker.bat   
 Seatbelt.exe   
 
