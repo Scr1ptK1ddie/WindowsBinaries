@@ -18,6 +18,8 @@ https://github.com/absolomb/Pentesting/blob/master/scripts/winenum.bat
 ____   
 
 # Exploits
+https://lolbas-project.github.io/#   
+
 ## Passwords
     reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"    
     
