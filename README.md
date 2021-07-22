@@ -1,6 +1,8 @@
+# Quick Reference
+[Window Privilige Escalation Quick Reference](https://github.com/Scr1ptK1ddie/WindowsPrivEsc/blob/master/QuickReference.md)
 # GhostPack-Compiled Binaries
 Compiled binaries for [GhostPack](https://github.com/GhostPack) authored by [@harmj0y](https://twitter.com/harmj0y)   
-Including: Rubeus, Seatbelt
+Including: Seatbelt
 
 # Other Windows Priv Esc Scripts
 PowerUp.ps1   
