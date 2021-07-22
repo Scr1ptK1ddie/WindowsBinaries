@@ -7,9 +7,11 @@
     tree /a /f     
     netstat /anto   
     for /L %i in (1,1,255) do @ping -n 1 -w 200 192.168.1.%i > nul && echo 192.168.1.%i is up.     
+
+[HackTricks Checklist](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)      
     
 ## Scripts
-https://github.com/absolomb/Pentesting/blob/master/scripts/winenum.bat
+[winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)    
 
 ## Powershell
     Get-ExecutionPolicy    
