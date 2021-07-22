@@ -1,5 +1,11 @@
 # Enum    
     whoami /priv
+    ipconfig /all   
+    tree /a /f   
+    net users   
+    net localgroup   
+    netstat /anto   
+    
 ## Scripts
 https://github.com/absolomb/Pentesting/blob/master/scripts/winenum.bat
 
