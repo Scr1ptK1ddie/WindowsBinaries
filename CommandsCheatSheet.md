@@ -6,6 +6,9 @@ Get-ExecutionPolicy
 Set-ExecutionPolicy Unrestricted   
 Set-MpPreference -DisableRealtimeMonitoring $true  
 
+## Kernel exploits   
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version"   
+
 
 # File Transfer  
 sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .   
