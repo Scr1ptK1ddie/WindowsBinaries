@@ -23,5 +23,7 @@ echo Set o=CreateObject^("MSXML2.XMLHTTP"^):Set a=CreateObject^("ADODB.Stream"^)
  
   
 # Resources
+## Cheat Sheets
+  https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts
   
   
