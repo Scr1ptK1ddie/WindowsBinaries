@@ -118,9 +118,9 @@ ____
   
 # Resources
 ## Cheat Sheets and Guides 
-https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts
+https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts 
 https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/ 
 ## Learn More
-https://www.roguesecurity.in/2018/12/02/a-guide-for-windows-penetration-testing/     
+https://www.roguesecurity.in/2018/12/02/a-guide-for-windows-penetration-testing/      
 https://github.com/frizb/Windows-Privilege-Escalation
   
