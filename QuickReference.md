@@ -72,5 +72,6 @@ ____
 ## Cheat Sheets
 https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts
 ## Learn More
-https://www.roguesecurity.in/2018/12/02/a-guide-for-windows-penetration-testing/
+https://www.roguesecurity.in/2018/12/02/a-guide-for-windows-penetration-testing/     
+https://github.com/frizb/Windows-Privilege-Escalation
   
