@@ -1,4 +1,5 @@
 # Enum    
+## Quick Enum
     whoami /priv
     ipconfig /all     
     net users   
@@ -7,11 +8,13 @@
     tree /a /f     
     netstat /anto   
     for /L %i in (1,1,255) do @ping -n 1 -w 200 192.168.1.%i > nul && echo 192.168.1.%i is up.     
-
-[HackTricks Checklist](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)      
+      
     
 ## Scripts
-[winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)    
+[winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)   
+
+## Checklists    
+[HackTricks Checklist](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)
 
 ## Powershell
     Get-ExecutionPolicy    
