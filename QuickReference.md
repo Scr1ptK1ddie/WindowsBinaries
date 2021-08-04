@@ -39,6 +39,9 @@ https://lolbas-project.github.io/#
     net start/stop service
 ### Unquoted Service Paths
     wmic service get name,displayname,pathname,startmode |findstr /i "Auto" |findstr /i /v "C:\Windows\\" 2>nul |findstr /i /v """   
+    sc qc [service name]        #to check what account service runs under 
+    powershell "get-acl -Path 'C:\Program Files (x86)\Service Folder' | format-list"     #to check dir perms 
+
 ### Weak Registry Permissions
 ### Insecure Service Executables 
     accesschk.exe -uwcqv "Everyone" *
