@@ -108,7 +108,8 @@ ____
  ____   
  # Port Forwarding
  Expose internal services, usually hidden due to firewall rules. 
-     netsh firewall show config 
+     netsh advfirewall firewall show config 
+     netsh advfirewall firewall add rule name="NAME" dir=in action=allow protocol=tcp localport=PORT 
      
 ## SSH (Window 10 and newer)
      [from target box to expose SMB ]
