@@ -15,6 +15,7 @@
     arp -a   
     netsh firewall show state 
     netsh firewall show config
+    C:\Windows\System32\drivers\etc\host        Windows DNS entries 
 ## Powershell
     Get-ExecutionPolicy    
     Set-ExecutionPolicy Unrestricted   
