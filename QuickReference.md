@@ -158,6 +158,7 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
      lsadump::sam  
      *then crack hashes or use pass the hash to login* [Online hash cracker](https://crackstation.net/) 
  ## AV Evasion 
+     [PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result) 
      reg.exe save HKLM\SAM sam.bak 
      reg.exe save HKLM\SYSTEM system.bak 
      *transfer files to attack box then dump* 
