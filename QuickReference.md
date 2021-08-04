@@ -180,7 +180,11 @@ Need to change /etc/proxychains4.conf socks4 to socks5 on attack box
      copy FILE \\IP\share\FILE  
 
  ## AV Evasion 
-     [PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result) 
+ ### Obfuscate Payloads
+[PHP payload encoder](https://www.gaijin.at/en/tools/php-obfuscator#result) 
+[Example - obfuscating payload to get a reverse shell on Windows](https://medium.com/@defsecone/evading-windows-defender-using-obfuscation-techniques-2494b2924807) 
+
+Use wrapper files to call static executables (such as nc) 
 
      
  ____
