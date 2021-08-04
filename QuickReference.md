@@ -18,8 +18,10 @@
     Set-ExecutionPolicy Unrestricted   
     Set-MpPreference -DisableRealtimeMonitoring $true   
     
-## Scripts
+## Scripts 
+**You might want to check for AV first!** 
 [winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)   
+[JAWS](https://github.com/411Hall/JAWS) 
 
 ## Checklists    
 [HackTricks Checklist](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)
