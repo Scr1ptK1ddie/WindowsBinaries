@@ -25,7 +25,8 @@
 [JAWS](https://github.com/411Hall/JAWS) 
 
 ## Checklists    
-[HackTricks Checklist](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation)
+[HackTricks Checklist](https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation) 
+[Fuzzy security](http://www.fuzzysecurity.com/tutorials/16.html) 
 
 ____   
 
