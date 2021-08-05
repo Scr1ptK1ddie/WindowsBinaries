@@ -1,6 +1,3 @@
-# Quick Reference
-[Windows Privilige Escalation Quick Reference](https://github.com/Scr1ptK1ddie/WindowsPrivEsc/blob/master/QuickReference.md)
-
 # Windows Priv Esc Scripts
 PowerUp.ps1   
 winPEAS ANY,x64,x86.exe   
