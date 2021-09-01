@@ -1,3 +1,6 @@
+# Bins on Kali 
+/usr/share/windows-resources/binaries/ 
+
 # Windows Priv Esc Scripts
 PowerUp.ps1   
 winPEAS ANY,x64,x86.exe   
