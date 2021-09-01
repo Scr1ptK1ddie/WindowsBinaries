@@ -1,5 +1,6 @@
 # Bins on Kali 
 /usr/share/windows-resources/binaries/ 
+nc, whoami, wget 
 
 # Windows Priv Esc Scripts
 PowerUp.ps1   
