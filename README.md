@@ -1,5 +1,5 @@
 # Bins on Kali 
-/usr/share/windows-resources/binaries/ 
+[/usr/share/windows-resources/binaries/](https://gitlab.com/kalilinux/packages/windows-binaries/)   
 nc, whoami, wget 
 
 # Windows Priv Esc Scripts
